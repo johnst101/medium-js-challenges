@@ -42,3 +42,27 @@ function progressiveSum(num3) {
 console.log(progressiveSum(4));
 
 // Q6: Calculate the time
+function calcTime(seconds) {
+  let timerMinutes = Math.floor(seconds / 60);
+  let timerSeconds = seconds % 60;
+
+  timerMinutes.toString().length < 2 ? timerMinutes = `0` + timerMinutes : timerMinutes;
+  timerSeconds.toString().length < 2 ? timerSeconds = `0` + timerSeconds : timerSeconds;
+
+  return timerMinutes + `:` + timerSeconds;
+}
+
+console.log(calcTime(66));
+
+// Q7: Find the largest number
+function getMax(arr) {
+  let max = arr[0];
+  for (let i = 1; i < arr.length; ++i) {
+    arr[i] > max ? max = arr[i] : max;
+  }
+  return max;
+}
+
+console.log(getMax([400, 1, 600]));
+
+// Q8: Reverse a string
