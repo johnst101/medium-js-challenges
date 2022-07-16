@@ -66,3 +66,36 @@ function getMax(arr) {
 console.log(getMax([400, 1, 600]));
 
 // Q8: Reverse a string
+function reverseString(string) {
+  return string.split('').reverse().join('');
+}
+
+console.log(reverseString('Tyler'));
+
+// Q9: Turn every element in an array into 0
+function convertToZeros(arr) {
+  return arr.map(elem => 0);
+}
+
+console.log(convertToZeros([5, 100, 40]));
+
+// Q10: Filter out all the apples
+function removeApples(arr) {
+  return arr.filter(elem => elem !== 'Apple');
+}
+
+console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']));
+
+// Q11: Filter out all the falsy values
+function filterOutFalsy(arr) {
+  return arr.filter(elem => !!elem);
+}
+
+console.log(filterOutFalsy(["", [], null, undefined, "0"]));
+
+// Q12: Truthy to true, Falsy to false
+function convertToBoolean(arr) {
+  return arr.map(elem => !!elem);
+}
+
+console.log(convertToBoolean([500, 0, "Tyler", "", []]));
